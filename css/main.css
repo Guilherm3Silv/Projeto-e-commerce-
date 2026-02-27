@@ -25,8 +25,14 @@ body {
   margin: auto;
 }
 
+a,
+svg {
+  cursor: pointer;
+}
+
 .secao-header {
   padding: 3rem 1rem;
+  background-color: rgba(244, 244, 244, 0.9568627451);
 }
 .secao-header .container-header {
   display: flex;
@@ -35,6 +41,8 @@ body {
 .secao-header .caixaheader {
   display: flex;
   gap: 3rem;
+  width: 100%;
+  position: fixed;
 }
 .secao-header .caixaheader__img {
   width: 15rem;
@@ -49,10 +57,38 @@ body {
   font-weight: 500;
   color: inherit;
 }
+.secao-header .caixaheader__tags:hover {
+  border-bottom: 0.2rem solid black;
+}
 .secao-header .caixaheader__containIcons {
   width: 50rem;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+.secao-header .caixaheader__bag {
+  transition: ease-in 200ms;
+}
+.secao-header .caixaheader__perfil {
+  transition: ease-in 200ms;
+}
+.secao-header .caixaheader__perfil:hover {
+  transform: scale(1.2);
+  transition: ease-in 200ms;
+}
+.secao-header .caixaheader__bag:hover {
+  cursor: pointer;
+  color: red;
+  transform: scale(1.2);
+  transition: ease-in 200ms;
+}
+.secao-header .caixaheader__path {
+  cursor: pointer;
+  fill: black;
+}
+.secao-header .caixaheader__path:hover {
+  fill: red;
 }
 
 /*# sourceMappingURL=main.css.map */
