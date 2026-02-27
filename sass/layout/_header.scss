@@ -1,5 +1,6 @@
 .secao-header {
 	padding: 3rem 1rem;
+	background-color: $white;
 	& .container-header {
 		display: flex;
 		justify-content: flex-start;
@@ -7,6 +8,9 @@
 	& .caixaheader {
 		display: flex;
 		gap: 3rem;
+		width: 100%;
+		position: fixed;
+
 		&__img {
 			width: 15rem;
 		}
@@ -19,11 +23,42 @@
 			text-decoration: none;
 			font-weight: 500;
 			color: inherit;
+
+			&:hover {
+				border-bottom: 0.2rem solid $black;
+			}
 		}
 		&__containIcons {
 			width: 50rem;
 			display: flex;
 			justify-content: flex-end;
+			align-items: center;
+			gap: 1rem;
+		}
+		&__bag {
+			transition: ease-in 200ms;
+		}
+		&__perfil {
+			transition: ease-in 200ms;
+			&:hover {
+				transform: scale(1.2);
+				transition: ease-in 200ms;
+			}
+		}
+
+		&__bag:hover {
+			cursor: pointer;
+			color: $red;
+			transform: scale(1.2);
+			transition: ease-in 200ms;
+		}
+
+		&__path {
+			cursor: pointer;
+			fill: $black;
+			&:hover {
+				fill: $red;
+			}
 		}
 	}
 }
